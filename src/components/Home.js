@@ -15,7 +15,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div>
+    <div className="container">
       <h1>TV Shows</h1>
       <ul>
         {shows.map((show) => (

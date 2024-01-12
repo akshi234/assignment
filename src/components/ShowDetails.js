@@ -1,6 +1,5 @@
-// src/components/ShowDetails.js
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import axios from "axios";
 import "./showDetails.css";
 
@@ -16,12 +15,16 @@ const ShowDetails = () => {
   }, [id]);
 
   return (
-    <div>
+    <div className="container">
       {show && (
         <div>
           <h1>{show.name}</h1>
           <p>{show.summary}</p>
-          {/* Add a button to book a movie ticket here */}
+          <div className="button-container">
+            <Link to="/">
+              <button className="button">Book Now</button>
+            </Link>
+          </div>
         </div>
       )}
     </div>
